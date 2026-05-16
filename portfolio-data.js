@@ -216,6 +216,7 @@ window.PORTFOLIO_DATA = {
       links: {
         github: "https://github.com/DavidOvalles-Dev",
       },
+      image: "uploads/SistemaSalonPrev.png",
       accent: "violet",
     },
     {
@@ -279,6 +280,7 @@ window.PORTFOLIO_DATA = {
       links: {
         github: "https://github.com/DavidOvalles-Dev",
       },
+      image: "uploads/GestionReservasPrev.png",
       accent: "cyan",
     },
   ],
