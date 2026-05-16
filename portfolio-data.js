@@ -219,6 +219,38 @@ window.PORTFOLIO_DATA = {
       accent: "violet",
     },
     {
+      id: "jeancarlos",
+      name: "Jean Carlos · La Estampa",
+      tag: { es: "Sitio web de atleta", en: "Athlete website" },
+      year: "2025",
+      category: { es: "Diseño & Marca Personal", en: "Design & Personal Brand" },
+      arch: { es: "Página web", en: "Web page" },
+      stack: ["HTML", "CSS", "JavaScript"],
+      description: {
+        es: "Página web de presentación para Jean Carlos, pelotero dominicano con proyección profesional. Diseño impactante centrado en la marca personal del atleta: galería, perfil, trayectoria y llamada a la acción para equipos y scouts.",
+        en: "Promotional website for Jean Carlos, a Dominican baseball player with professional prospects. Bold design focused on the athlete's personal brand: gallery, profile, career stats and a call-to-action for teams and scouts.",
+      },
+      features: {
+        es: [
+          "Diseño visual de alto impacto centrado en el atleta",
+          "Galería fotográfica y perfil del pelotero",
+          "Trayectoria y estadísticas destacadas",
+          "Contacto directo para equipos y scouts",
+        ],
+        en: [
+          "High-impact visual design centered on the athlete",
+          "Photo gallery and player profile",
+          "Career highlights and stats",
+          "Direct contact for teams and scouts",
+        ],
+      },
+      links: {
+        live: "https://davidovalles-dev.github.io/jean-carlos-laestampa/",
+      },
+      image: "uploads/JeanCarlosWebPreview.png",
+      accent: "amber",
+    },
+    {
       id: "hotel",
       name: { es: "Gestión de Reservas Hoteleras", en: "Hotel Reservation System" },
       tag: { es: "Hotel Management System", en: "Hotel Management System" },
@@ -285,5 +317,6 @@ window.PORTFOLIO_DATA = {
     loading: { es: "Cargando portafolio", en: "Loading portfolio" },
     viewCode: { es: "Ver código", en: "View code" },
     watchDemo: { es: "Ver demo", en: "Watch demo" },
+    viewSite: { es: "Ver sitio", en: "View site" },
   },
 };

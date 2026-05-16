@@ -1386,6 +1386,21 @@ a, button, .stack-chip, .edu-card, .project, .contact-cta, .contact-cell, .btn,
   min-height: 100%;
 }
 .project-visual--video { aspect-ratio: 16/9; }
+.project-visual--image { overflow: hidden; }
+.project-visual-imglink { display: block; width: 100%; height: 100%; }
+.project-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+.project-visual-imglink:hover .project-preview-img {
+  transform: scale(1.03);
+  opacity: 1;
+}
 .project-content {
   padding: 32px;
   display: flex;

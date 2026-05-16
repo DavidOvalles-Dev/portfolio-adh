@@ -438,6 +438,8 @@ function ProjectCard({ project, idx, lang }) {
   const d = window.PORTFOLIO_DATA;
   const ref = React.useRef(null);
   const hasVideo = !!project.links?.youtube;
+  const hasImage = !!project.image;
+  const hasLive  = !!project.links?.live;
 
   function onMove(e) {
     if (!ref.current) return;
@@ -455,7 +457,7 @@ function ProjectCard({ project, idx, lang }) {
       ref={ref}
       onMouseMove={onMove}
       data-accent={project.accent}
-      className={"project reveal-card" + (hasVideo ? " project--has-video project-feature" : "")}
+      className={"project reveal-card" + (hasVideo ? " project--has-video project-feature" : "") + (hasImage ? " project--has-image" : "")}
       data-delay={(idx % 3) + 1}
     >
       <div className="project-grid">
@@ -480,6 +482,10 @@ function ProjectCard({ project, idx, lang }) {
               <a className="btn btn--solid" href={project.links.youtube.replace("/embed/", "/watch?v=")} target="_blank" rel="noreferrer">
                 {T(d.ui.watchDemo, lang)} ↗
               </a>
+            ) : hasLive ? (
+              <a className="btn btn--solid" href={project.links.live} target="_blank" rel="noreferrer">
+                {T(d.ui.viewSite, lang)} ↗
+              </a>
             ) : (
               <a className="btn btn--solid" href={project.links.github} target="_blank" rel="noreferrer">
                 {T(d.ui.viewCode, lang)} →
@@ -487,7 +493,7 @@ function ProjectCard({ project, idx, lang }) {
             )}
           </div>
         </div>
-        <div className={"project-visual" + (hasVideo ? " project-visual--video" : "")}>
+        <div className={"project-visual" + (hasVideo ? " project-visual--video" : "") + (hasImage ? " project-visual--image" : "")}>
           {hasVideo ? (
             <iframe
               src={project.links.youtube}
@@ -496,6 +502,10 @@ function ProjectCard({ project, idx, lang }) {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
+          ) : hasImage ? (
+            <a href={project.links.live || project.links.github} target="_blank" rel="noreferrer" className="project-visual-imglink">
+              <img src={project.image} alt={T(project.name, lang) + " preview"} className="project-preview-img" loading="lazy" />
+            </a>
           ) : (
             <div className="project-visual-placeholder">
               <span className="project-visual-mark">{initial}</span>
